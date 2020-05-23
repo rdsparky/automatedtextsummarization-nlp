@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Result</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+<style>
+body {
+  background-color: black;
+  color:brown;
+}
+
+h2 {
+  background-color: black;
+  color: grey;
+}
+</style>
+</head>
+<body>
+
+
+   <br>
+   <h2>Summary build on LATENT SEMANTIC ANALYSIS(LSA):</h2>
+   <br>
+   <br>
+   {{ lsap }}
+   <br>
+   <br>	
+   <br>
+   <h2>Summary build on TEXTRANK:</h2>
+   <br>
+   <br>
+   {{ trp }}
+   <br>
+   <br>	
+   <br>
+   <h2>Network Diagram of Sentence Interconnection:</h2>
+   <br>
+   <img src="/static/{{imur}}"align="middle" />
+	
+    
+	
+	
+
+</body>
+</html>

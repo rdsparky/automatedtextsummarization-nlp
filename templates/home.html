@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+<style>
+body {
+  background-color: black;
+  color:#676767;
+}
+
+h2 {
+  background-color: black;
+  color: grey;
+}
+textarea {
+ background-color: black;
+  color: grey;
+ }
+submit {
+ background-color: black;
+  color: grey;
+ } 
+ .button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+} 
+</style>
+</head>
+<body>
+	<header>
+		<div class="container">
+		<div id="brandname">
+		<h2 style="font-size:5vw;">NATURAL LANGUAGE PROCESSING with Deep Learning</h2>
+		</div>
+		<h2 style="font-size:4vw;">Auto Text Summarization</h2>
+		
+	</div>
+	</header>
+	
+	<div class="ml-container">
+
+		<form action="{{ url_for('predict')}}" method="POST">
+		<p>Enter Your Content Here</p>
+		<!-- <input type="text" name="comment"/> -->
+		<textarea name="content" rows="30" cols="160" required="required"></textarea>
+		<br/>
+
+		<input type="submit" class="button" value="submit">
+		
+	</form>
+
+   
+	</div>
+    
+	
+	
+
+</body>
+</html>
