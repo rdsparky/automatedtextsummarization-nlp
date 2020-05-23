@@ -51,7 +51,7 @@ def summary(document):
         u, s, vt = svds(matrix, k=singular_count)
         return u, s, vt
 
-    num_sentences = 8
+    num_sentences = int(len(sentences)*0.4)
     num_topics = 3
 
     u, s, vt = low_rank_svd(td_matrix, singular_count=num_topics)  
